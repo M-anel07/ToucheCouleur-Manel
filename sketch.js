@@ -57,6 +57,10 @@ function nouveauTour() {
 }
 
 function mousePressed() {
+    if (mouseX < 0 || mouseX > width || mouseY < 0 || mouseY > height) {
+        return;
+    }
+
     //On calcule la distance entre la souris et le mot "ROUGE"
     // (lesX[0] et lesY[0] sont les coordonnées de "ROUGE" car c'est le premier de ta liste)
     let d = dist(mouseX, mouseY, lesX[0], lesY[0]);
